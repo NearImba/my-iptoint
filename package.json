@@ -4,11 +4,15 @@
   "description": "convert ip to 32-bit int",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/index.js"
+    "test": "mocha test/index.js",
+    "compile": "node_modules/.bin/babel src --out-dir lib"
   },
   "author": "NearImba",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.4.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.14.0",
@@ -16,5 +20,13 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.2.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
   }
 }
