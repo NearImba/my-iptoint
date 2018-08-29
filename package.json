@@ -1,6 +1,6 @@
 {
   "name": "my-iptoint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convert ip to 32-bit int",
   "main": "lib/index.js",
   "module": "src/index.js",

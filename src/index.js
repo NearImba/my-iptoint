@@ -1,10 +1,10 @@
 import shapeInput from './shapeInput'
-function convertIpInto32int (ip) {
+export function convertIpInto32int (ip) {
   ip = shapeInput(ip)
   if (ip) {
     let r = 0
     ip.split('.').forEach((part, index) => {
-      if(index > 3) {
+      if (index > 3) {
         return
       }
       r = r | ((part | 0) << (3 - index) * 8)
@@ -13,8 +13,4 @@ function convertIpInto32int (ip) {
   } else {
     console.warn('please provide valid input')
   }
-}
-
-export default {
-  convertIpInto32int,
 }
